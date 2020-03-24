@@ -1,0 +1,13 @@
+@import 'variables.scss';
+
+footer {
+    padding: 5px;
+    background-color: $cinza-principal;
+    p {
+        color: $cinza-secundario;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}

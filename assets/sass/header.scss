@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+header {
+    padding: 8px;
+    background-color: $azul-principal;
+    img {
+        width: 100px;
+    }
+    nav {
+        li {
+            display: inline-block;
+            margin: 5px;
+            a {
+                color: $cinza-secundario;
+                text-decoration: none;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
