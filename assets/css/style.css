@@ -30,4 +30,13 @@ h1 {
   color: #081a7d;
   font-weight: bold; }
 
+main button {
+  background-color: #081a7d;
+  border-radius: 4px;
+  border: none;
+  padding: 15px 40px; }
+  main button a {
+    color: #fff;
+    font-weight: bold; }
+
 /*# sourceMappingURL=style.css.map */

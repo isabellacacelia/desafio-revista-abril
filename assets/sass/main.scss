@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
 
+@import 'variables.scss';
 @import 'header.scss';
 @import 'footer.scss';
 
@@ -11,4 +12,17 @@ body {
 h1 {
     color: $azul-principal;
     font-weight: bold;
+}
+
+main {
+    button {
+        background-color: $azul-principal;
+        border-radius: 4px;
+        border: none;
+        padding: 15px 40px;
+        a {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
 }
