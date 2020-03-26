@@ -4,7 +4,20 @@ footer {
     padding: 5px;
     background-color: $cinza-principal;
     p {
+        width: 49%;
+        display: inline-block;
         color: $cinza-secundario;
+        &:last-of-type {
+            text-align: right;
+        }
+        @media(max-width: 500px) {
+            width: 100%;
+            display: block;
+            text-align: center;
+            &:last-of-type {
+                text-align: center;
+            }
+        }
     }
     a {
         color: #fff;

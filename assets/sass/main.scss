@@ -15,14 +15,22 @@ h1 {
 }
 
 main {
-    button {
-        background-color: $azul-principal;
-        border-radius: 4px;
-        border: none;
-        padding: 15px 40px;
-        a {
-            color: #fff;
-            font-weight: bold;
+    .button-container {
+        text-align: center;
+        margin: 10px;
+        button {
+            background-color: $azul-principal;
+            border-radius: 4px;
+            border: none;
+            padding: 15px 40px;
+            a {
+                color: #fff;
+                font-weight: bold;
+            }
         }
     }
+}
+
+.mystyle {
+    display: block !important;
 }

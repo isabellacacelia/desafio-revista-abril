@@ -7,14 +7,43 @@ header {
         width: 100px;
     }
     nav {
-        li {
-            display: inline-block;
-            margin: 5px;
-            a {
-                color: $cinza-secundario;
-                text-decoration: none;
-                &:hover {
-                    color: #fff;
+        width: 90%;
+        display: inline-block;
+        text-align: right;
+        @media(max-width: 500px) {
+            width: 60%;
+        }
+        .nav-menu {
+            @media(max-width: 769px) {
+                display: none;
+            }
+        }
+        .menu-hamburguer {
+            background: transparent;
+            border: 0;
+        }
+        .hamburguer {
+        display: block;
+        background: $cinza-secundario;
+        width: 25px;
+        height: 2px;
+        margin: 4px;
+        // transition: .5s ease-in-out;
+        }
+        ul {
+            margin: 0;
+            li {
+                display: inline-block;
+                margin: 5px;
+                a {
+                    color: $cinza-secundario;
+                    text-decoration: none;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+                @media(max-width: 500px) {
+                    display: block;
                 }
             }
         }
