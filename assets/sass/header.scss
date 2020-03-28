@@ -1,51 +1,68 @@
-@import 'variables.scss';
+@import "variables.scss";
 
 header {
-    padding: 8px;
-    background-color: $azul-principal;
-    img {
-        width: 100px;
+  padding: 8px;
+  background-color: $azul-principal;
+  img {
+    width: 100px;
+    margin-top: 10px;
+  }
+  nav {
+    width: 90%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    vertical-align: top;
+    margin-top: 15px;
+    @media (max-width: 321px) {
+      width: 60%;
+      margin-top: 20px;
     }
-    nav {
-        width: 90%;
+    @media (min-width: 375px) and (max-width: 380px) {
+      width: 65%;
+      margin-top: 20px;
+    }
+    @media (min-width: 380px) and (max-width: 426px) {
+      width: 70%;
+      margin-top: 20px;
+    }
+    @media (min-width: 500px) and (max-width: 769px) {
+      width: 80%;
+      margin-top: 20px;
+    }
+    .nav-menu {
+      @media (max-width: 769px) {
+        display: none;
+      }
+    }
+    .menu-hamburguer {
+      background: transparent;
+      border: 0;
+    }
+    .hamburguer {
+      display: block;
+      background: $cinza-secundario;
+      width: 25px;
+      height: 2px;
+      margin: 4px;
+      // transition: .5s ease-in-out;
+    }
+    ul {
+      margin: 0;
+      li {
         display: inline-block;
-        text-align: right;
-        @media(max-width: 500px) {
-            width: 60%;
+        margin: 5px;
+        a {
+          color: $cinza-secundario;
+          text-decoration: none;
+          &:hover {
+            color: #fff;
+          }
         }
-        .nav-menu {
-            @media(max-width: 769px) {
-                display: none;
-            }
+        @media (max-width: 500px) {
+          display: block;
         }
-        .menu-hamburguer {
-            background: transparent;
-            border: 0;
-        }
-        .hamburguer {
-        display: block;
-        background: $cinza-secundario;
-        width: 25px;
-        height: 2px;
-        margin: 4px;
-        // transition: .5s ease-in-out;
-        }
-        ul {
-            margin: 0;
-            li {
-                display: inline-block;
-                margin: 5px;
-                a {
-                    color: $cinza-secundario;
-                    text-decoration: none;
-                    &:hover {
-                        color: #fff;
-                    }
-                }
-                @media(max-width: 500px) {
-                    display: block;
-                }
-            }
-        }
+      }
     }
+  }
 }

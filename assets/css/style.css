@@ -3,14 +3,31 @@ header {
   padding: 8px;
   background-color: #081a7d; }
   header img {
-    width: 100px; }
+    width: 100px;
+    margin-top: 10px; }
   header nav {
     width: 90%;
-    display: inline-block;
-    text-align: right; }
-    @media (max-width: 500px) {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    vertical-align: top;
+    margin-top: 15px; }
+    @media (max-width: 321px) {
       header nav {
-        width: 60%; } }
+        width: 60%;
+        margin-top: 20px; } }
+    @media (min-width: 375px) and (max-width: 380px) {
+      header nav {
+        width: 65%;
+        margin-top: 20px; } }
+    @media (min-width: 380px) and (max-width: 426px) {
+      header nav {
+        width: 70%;
+        margin-top: 20px; } }
+    @media (min-width: 500px) and (max-width: 769px) {
+      header nav {
+        width: 80%;
+        margin-top: 20px; } }
     @media (max-width: 769px) {
       header nav .nav-menu {
         display: none; } }
@@ -59,11 +76,48 @@ footer {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 h1 {
   color: #081a7d;
   font-weight: bold; }
+
+article {
+  width: 60%;
+  display: inline-block;
+  color: #333; }
+  article hr {
+    border: solid 1px #ccc;
+    margin: 30px 0; }
+  article .post-noticia h2 {
+    margin: 0; }
+  article .post-noticia .post-infos {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    margin-left: 20px; }
+  article .post-noticia .post-thumbnail {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    height: auto; }
+  article .post-noticia .post-categoria {
+    color: #081a7d;
+    font-weight: bold;
+    margin: 0; }
+  article .post-noticia .post-icone {
+    margin-right: 10px; }
+
+aside {
+  width: 30%;
+  display: inline-flex;
+  justify-content: flex-end;
+  vertical-align: top;
+  margin-left: 50px; }
+  aside .post-aside {
+    background-color: #ccc;
+    width: 400px;
+    height: 200px; }
 
 main .button-container {
   text-align: center;
@@ -72,7 +126,10 @@ main .button-container {
     background-color: #081a7d;
     border-radius: 4px;
     border: none;
-    padding: 15px 40px; }
+    padding: 15px 40px;
+    margin-bottom: 20px; }
+    main .button-container button:hover {
+      background-color: #919fea; }
     main .button-container button a {
       color: #fff;
       font-weight: bold; }

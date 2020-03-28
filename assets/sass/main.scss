@@ -1,36 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap");
 
-@import 'variables.scss';
-@import 'header.scss';
-@import 'footer.scss';
+@import "variables.scss";
+@import "header.scss";
+@import "footer.scss";
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
-    color: $azul-principal;
-    font-weight: bold;
+  color: $azul-principal;
+  font-weight: bold;
+}
+
+article {
+  width: 60%;
+  display: inline-block;
+  color: $cinza-principal;
+  hr {
+    border: solid 1px $cinza-secundario;
+    margin: 30px 0;
+  }
+  .post-noticia {
+    h2 {
+      margin: 0;
+    }
+    .post-infos {
+      display: inline-block;
+      vertical-align: top;
+      width: 35%;
+      margin-left: 20px;
+    }
+    .post-thumbnail {
+      display: inline-block;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+    .post-categoria {
+      color: $azul-principal;
+      font-weight: bold;
+      margin: 0;
+    }
+    .post-icone {
+      margin-right: 10px;
+    }
+  }
+}
+
+aside {
+  width: 30%;
+  display: inline-flex;
+  justify-content: flex-end;
+  vertical-align: top;
+  margin-left: 50px;
+  .post-aside {
+    background-color: $cinza-secundario;
+    width: 400px;
+    height: 200px;
+  }
 }
 
 main {
-    .button-container {
-        text-align: center;
-        margin: 10px;
-        button {
-            background-color: $azul-principal;
-            border-radius: 4px;
-            border: none;
-            padding: 15px 40px;
-            a {
-                color: #fff;
-                font-weight: bold;
-            }
-        }
+  .button-container {
+    text-align: center;
+    margin: 10px;
+    button {
+      background-color: $azul-principal;
+      border-radius: 4px;
+      border: none;
+      padding: 15px 40px;
+      margin-bottom: 20px;
+      &:hover {
+        background-color: #919fea;
+      }
+      a {
+        color: #fff;
+        font-weight: bold;
+      }
     }
+  }
 }
 
 .mystyle {
-    display: block !important;
+  display: block !important;
 }
