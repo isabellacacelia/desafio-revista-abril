@@ -1,19 +1,29 @@
-function init() {
+const menuMobile = () => {
   "use stric";
 
-  let teste = document.getElementById("teste");
-  let teste2 = document.getElementById("btn");
+  let menuNavbar = document.getElementById("menu-navbar");
 
-  console.log(teste2);
-
-  teste.onclick = function() {
-    if ($(".nav-menu").hasClass("mystyle")) {
-      console.log("essa classe ja foi chamada");
-      $(".nav-menu").removeClass("mystyle");
+  menuNavbar.onclick = function() {
+    if ($(".nav-menu").hasClass("showMenu")) {
+      $(".nav-menu").removeClass("showMenu");
     } else {
-      $(".nav-menu").addClass("mystyle");
+      $(".nav-menu").addClass("showMenu");
     }
   };
-}
+};
 
-init();
+const carregarNoticias = e => {
+  $(".load").show();
+
+  const page = $("#btn-carregar-mais").attr("data-page");
+
+  $.get("noticias.php?page=" + page, function(data) {
+    $(data).insertBefore(".button-container");
+    $("#btn-carregar-mais").attr("data-page", Number(page) + 1);
+    $(".load").hide();
+  });
+};
+
+$("#btn-carregar-mais").click(carregarNoticias);
+
+menuMobile();

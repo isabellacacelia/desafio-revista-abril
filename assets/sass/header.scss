@@ -31,6 +31,10 @@ header {
       width: 80%;
       margin-top: 20px;
     }
+    @media (min-width: 900px) and (max-width: 1025px) {
+      width: 85%;
+      margin-top: 15px;
+    }
     .nav-menu {
       @media (max-width: 769px) {
         display: none;
@@ -46,7 +50,6 @@ header {
       width: 25px;
       height: 2px;
       margin: 4px;
-      // transition: .5s ease-in-out;
     }
     ul {
       margin: 0;
@@ -66,4 +69,13 @@ header {
       }
     }
   }
+}
+
+.showMenu {
+  display: block !important;
+  width: 100%;
+  top: 50px;
+  position: absolute;
+  padding: 20px;
+  background: #081a7d;
 }

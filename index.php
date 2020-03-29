@@ -13,10 +13,18 @@
 <body>
   <? include 'header.php' ?>
 
+  <div class="load">
+  </div>
+
   <main class="container">
     <h1>Últimas notícias</h1>
     <article>
       <? include 'noticias.php' ?>
+      <div class="button-container">
+        <button data-page="2" id="btn-carregar-mais">
+          <a>Carregar mais</a>
+        </button>
+      </div>
     </article>
     <aside>
       <div class="post-aside"></div>

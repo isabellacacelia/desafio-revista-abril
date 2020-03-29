@@ -21,19 +21,10 @@ if (count($api->posts)) {
             </div>
             <hr />
         </div>
+
         <?php if ($count % 3 == 0) { ?>
     <?php }
     }
 } else { ?>
     <h2>Desculpa, tivemos um problema. Tente novamente mais tarde</h2>
 <?php } ?>
-
-<?php if ($count >= 3 && $count % 3 == 1) { ?>
-    <div class="button-container">
-        <button>
-            <a href="index.php?qtd=<?= $qtd + 1 ?>">Carregar mais</a>
-        </button>
-    </div>
-
-<?php }
-?>
