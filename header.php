@@ -8,7 +8,7 @@
                 <span class="hamburguer"></span>
                 <span class="hamburguer"></span>
             </button>
-            <ul id="teste2" class="nav-menu">
+            <ul class="nav-menu">
                 <li><a href="#">Diálogos vazados</a></li>
                 <li><a href="#">Previdência</a></li>
                 <li><a href="#">Radar</a></li>

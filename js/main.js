@@ -2,6 +2,9 @@ function init() {
   "use stric";
 
   let teste = document.getElementById("teste");
+  let teste2 = document.getElementById("btn");
+
+  console.log(teste2);
 
   teste.onclick = function() {
     if ($(".nav-menu").hasClass("mystyle")) {

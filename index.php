@@ -1,5 +1,3 @@
-<? include 'request.php' ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -18,46 +16,12 @@
   <main class="container">
     <h1>Últimas notícias</h1>
     <article>
-      <?php
-      if (count($api->posts)) {
-        $count = 0;
-        foreach ($api->posts as $API) {
-          $count++;
-      ?>
-          <?php if ($count % 3 == 1) { ?>
-            <div class="post-noticia">
-              <img src="<?= $API->featured_image ?>" alt="<?= $API->title ?>" class="post-thumbnail">
-              <div class="post-infos">
-                <p class="post-categoria">
-                  <?php
-                  $categoria = (array) $API->terms->category;
-                  print_r($categoria[array_keys($categoria)[0]]->name);
-                  ?>
-                </p>
-                <h2><?= $API->title ?></h2>
-                <p><img class="post-icone" src="img/relogio.png"><?= date('d/m/Y H:i', strtotime($API->date)) ?></p>
-              </div>
-            </div>
-            <hr>
-          <?php } ?>
-
-          <?php if ($count % 3 == 0) { ?>
-        <?php }
-        }
-      } else { ?>
-        <h2>Desculpa, tivemos um problema. Tente novamente mais tarde</h2>
-      <?php } ?>
+      <? include 'noticias.php' ?>
     </article>
     <aside>
       <div class="post-aside"></div>
     </aside>
-    <?php if ($count > 5) { ?>
-      <div class="button-container">
-        <button>
-          <a>Carregar mais</a>
-        </button>
-      </div>
-    <?php } ?>
+
   </main>
 
   <? include 'footer.php' ?>
