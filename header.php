@@ -2,8 +2,8 @@
     <div class="container">
         <img src="img/logo.png" alt="Logo Veja" title="Logo Veja">
 
-        <nav class="navbar">
-            <button id="teste" class="menu-hamburguer hidden-md hidden-lg">
+        <nav id="teste" class="navbar">
+            <button class="menu-hamburguer hidden-md hidden-lg">
                 <span class="hamburguer"></span>
                 <span class="hamburguer"></span>
                 <span class="hamburguer"></span>

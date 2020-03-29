@@ -11,7 +11,8 @@ header {
     justify-content: flex-end;
     align-items: center;
     vertical-align: top;
-    margin-top: 15px; }
+    margin-top: 15px;
+    position: relative; }
     @media (max-width: 321px) {
       header nav {
         width: 60%;
@@ -159,5 +160,13 @@ main .button-container {
     main .button-container button a {
       color: #fff;
       font-weight: bold; }
+
+.mystyle {
+  display: block !important;
+  width: 100%;
+  top: 50px;
+  position: absolute;
+  padding: 20px;
+  background: #081a7d; }
 
 /*# sourceMappingURL=style.css.map */

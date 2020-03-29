@@ -4,11 +4,13 @@ function init() {
   let teste = document.getElementById("teste");
 
   teste.onclick = function() {
-    console.log("fui clicado");
-    document.getElementById("teste2").classList.add("mystyle");
+    if ($(".nav-menu").hasClass("mystyle")) {
+      console.log("essa classe ja foi chamada");
+      $(".nav-menu").removeClass("mystyle");
+    } else {
+      $(".nav-menu").addClass("mystyle");
+    }
   };
-
-  console.log(teste);
 }
 
 init();
